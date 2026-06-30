@@ -1,0 +1,96 @@
+/* ═══════════════════════════════════════════════════════════
+   SOLAR — Sobre Nós (about-us.html)
+   Depende de: global.css
+═══════════════════════════════════════════════════════════ */
+
+.about {
+  padding: var(--space-12) 0 var(--space-10);
+  min-height: calc(100vh - var(--header-height));
+}
+
+.about-title {
+  text-align:    center;
+  color:         var(--solar-orange);
+  font-size:     var(--text-3xl);
+  margin-bottom: var(--space-8);
+}
+
+.about-grid {
+  display:               grid;
+  grid-template-columns: 1fr 1fr;
+  gap:                   var(--space-6);
+  margin-bottom:         var(--space-6);
+}
+
+.about-text {
+  color:         var(--text-secondary);
+  line-height:   var(--leading-loose);
+  margin-bottom: var(--space-4);
+}
+
+.about-text strong { color: var(--text-primary); }
+
+.about-highlight {
+  background:    var(--bg-secondary);
+  border:        1px solid var(--border-subtle);
+  border-left:   3px solid var(--solar-orange);
+  border-radius: var(--radius-md);
+  padding:       var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.about-highlight .about-text { margin-bottom: 0; }
+
+/* ── Estatísticas ─────────────────────── */
+.about-stats {
+  display:               grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:                   var(--space-4);
+  margin-bottom:         var(--space-10);
+}
+
+.about-stat {
+  background:    var(--bg-card);
+  border:        1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding:       var(--space-5) var(--space-4);
+  text-align:    center;
+  transition:    border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.about-stat:hover {
+  border-color: var(--border-accent);
+  transform:    translateY(-3px);
+}
+
+.about-stat__number {
+  display:     block;
+  font-family: var(--font-display);
+  font-size:   var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color:       var(--solar-amber);
+}
+
+.about-stat__label {
+  display:        block;
+  font-size:      var(--text-xs);
+  color:          var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+  margin-top:     var(--space-1);
+}
+
+/* ── Ação ─────────────────────────────── */
+.about-actions {
+  text-align: center;
+}
+
+.about-save {
+  padding: var(--space-3) var(--space-12);
+}
+
+/* ── Responsivo ───────────────────────── */
+@media (max-width: 640px) {
+  .about-grid  { grid-template-columns: 1fr; gap: 0; }
+  .about-stats { grid-template-columns: 1fr; }
+}

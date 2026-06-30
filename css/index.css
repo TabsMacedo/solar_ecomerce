@@ -1,0 +1,48 @@
+/* ═══════════════════════════════════════════════════════════
+   SOLAR — Página Principal (index.html)
+   Depende de: global.css
+═══════════════════════════════════════════════════════════ */
+
+/* ── SEÇÃO: PROMOS DO DIA ─────────────── */
+.promos {
+  padding: var(--space-10) 0 var(--space-8);
+}
+
+.promos-cards {
+  background:    var(--bg-secondary);
+  border:        1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding:       var(--space-4);
+}
+
+/* ── SEÇÃO: SÓ PARA VOCÊ ──────────────── */
+.recommendations {
+  padding: var(--space-8) 0 var(--space-10);
+}
+
+.recommendations-img-wrapper {
+  position:   relative;
+  background: linear-gradient(135deg, #1C1248, #281860);
+}
+
+.recommendations-badge {
+  position: absolute;
+  top:      var(--space-2);
+  left:     var(--space-2);
+  z-index:  var(--z-base);
+}
+
+/* ── PAGINAÇÃO ────────────────────────── */
+.pagination-section {
+  padding: var(--space-6) 0 var(--space-10);
+}
+
+.pagination-list { margin: 0; }
+
+/* Em telas pequenas, empilha os controles da paginação */
+@media (max-width: 560px) {
+  .pagination {
+    flex-direction: column;
+    gap: var(--space-3);
+  }
+}

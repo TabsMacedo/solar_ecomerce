@@ -1,0 +1,45 @@
+/* ═══════════════════════════════════════════════════════════
+   SOLAR — Resultados da Busca (search.html)
+   Depende de: global.css
+═══════════════════════════════════════════════════════════ */
+
+.search {
+  padding: var(--space-8) 0 var(--space-10);
+  min-height: calc(100vh - var(--header-height));
+}
+
+/* destaca a barra de busca quando a página de resultados está ativa */
+.navbar-search-wrapper--active {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+.navbar-search-wrapper--active .navbar-search { color: var(--bg-primary); }
+.navbar-search-wrapper--active .navbar-search::placeholder { color: var(--text-muted); }
+
+/* ── Resumo dos resultados ────────────── */
+.search-summary {
+  display:       flex;
+  align-items:   baseline;
+  flex-wrap:     wrap;
+  gap:           var(--space-3);
+  font-size:     var(--text-base);
+  color:         var(--text-secondary);
+  margin-bottom: var(--space-6);
+}
+
+.search-summary__term {
+  color:       var(--solar-orange);
+  font-weight: var(--weight-bold);
+}
+
+.search-summary__count {
+  font-size:      var(--text-xs);
+  color:          var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-wide);
+}
+
+/* ── Grade de resultados ──────────────── */
+.search-results {
+  margin-bottom: var(--space-10);
+}
